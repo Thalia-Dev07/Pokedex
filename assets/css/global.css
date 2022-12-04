@@ -1,0 +1,35 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; 
+}
+
+html {
+    
+}
+body {
+    background-image: url(https://i.pinimg.com/564x/85/a3/5e/85a35ea1ce49cfcc34089f6b00526796.jpg);
+    /*background-repeat: no-repeat;
+    background-height: 100vh;
+    background-width: 100vh; */
+}
+
+.content {
+    background-image: url(https://i.pinimg.com/564x/85/a3/5e/85a35ea1ce49cfcc34089f6b00526796.jpg);
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+   
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+      max-width: 992px;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 1rem;
+    }
+  }
+
+
+
+
