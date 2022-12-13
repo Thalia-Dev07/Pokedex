@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>Tutorial - PokeDex</title>
+
+    <!--FONTS ROBOTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!--NOSSO CSS--> 
+    <link rel="stylesheet" href="./assets/css/document.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    
+</head>
+<body id="tut">
+
+    <main>
+
+        <header>
+
+            <div class="topo">
+              <img src="./image/Pokémon-PNG.png" width="400" alt="PokeDex">
+              <h1>Tutorial da API na PokeDex</h1>
+            </div>
+
+        </header>
+
+        <div style="align-items: center;">
+          <button class="button-voltar" ><a href="index.html">Voltar a Pokedex</a></button>
+        </div>
+
+        <section id="section-1" class="container">
+            <div class="section-texts">
+              <h2>PASSO 1</h2>
+              <p role="text">
+                Criar a estrutura base de HTML, CSS e JavaScript para iniciar seu código.
+              </p>
+              <p role="text"><i>DICA: a estrutura principal do HTML pode ser configurada automaticamente informando o 
+                caracter <strong>"!"</strong> (exclamação) na barra de pesquisa do VSCode.</i></p>
+            </div>
+    
+            <img
+              class="img-1"
+              src="./image/html_code.PNG"
+              alt="código de HTML"
+            />
+        </section>
+
+
+        <section id="section-2" class="container">
+            <div class="video-frame" aria-hidden="true">
+                <img class="img-2" src="./image/pokedex_google.PNG" alt="Pesquisa no navegador - PokeDex">
+            </div>
+            <div class="section-texts">
+              <h2>PASSO 2</h2>
+              <p role="text">Tendo realizado o código de sua página web, faça uma busca na internet pelo 
+                seu navegador da API desejada.</p>
+              <p role="text"><i>No nosso exemplo, faremos a busca da API para a PokeDex:</i></p>
+            </div>
+        </section>
+
+
+        <section id="section-1" class="container">
+
+            <div class="section-texts">
+              <h2>PASSO 3</h2>
+              <p role="text">Copiar e colar os links destacados em vermelho na imagem ao lado.</p>
+              <p role="text"><i>Obs.: copiar sem o "ditto" no final do link.</i></p>
+            </div>
+    
+            <img class="img-1" src="./image/link de API.PNG" alt="site com link de API"/>
+          
+        </section>
+
+        <section id="section-1" class="container">
+
+          <div class="section-texts">
+            <p role="text"><i>Resultado em outra aba do navegador:</i></p>
+          </div>
+
+          <img src="./image/dados_API.PNG" style="width: 50%;
+          box-shadow: 10px 20px grey; margin-top: 5%;" alt="dados da API">
+ 
+        </section>
+
+
+        <section id="section-2" class="container">
+          <div class="video-frame" aria-hidden="true">
+            <img src="./image/img-4.jpeg" style="width: 80%;
+            box-shadow: 10px 20px grey; margin-top: 20%;" alt="">
+          </div>
+            <div class="section-texts">
+              <h2>PASSO 4</h2>
+              <h3>Feito isso, vamos organizar esse montante de dados.</h3>
+              <p>
+              Primeiramente, vamos parametrizar essa
+              <abbr title="Uniform Resource Locator">Url</abbr> da PokeDex. <br />
+              Vamos adicionar a estrutura de url
+              <strong>?offset=0&limit=10</strong> após o termo "pokemon" no final da url
+              principal.
+            </p>
+            <p>
+              <strong>Exemplo:</strong> 'https://pokeapi.co/api/v2/pokemon<strong
+                >?offset=0&limit=10'</strong
+              >
+            </p>
+            <p>
+              A API conta com um total de <strong>1154 pokemons</strong> (é possível
+              visualizar na imagem anterior o número após o termo "count"). <br />Para
+              definir quantos pokemons você deseja que apareçam na sua página, se mantém
+              o <strong>offset=0</strong> e o
+              <strong>limit=(qualquer número até 1154)</strong>, definindo assim a
+              quantidade de pokemons de sua lista.
+            </p>
+            <h3>
+              Definidos os parâmetros da Url e da quantidade de pokemons desejada, vamos
+              partir para os códigos.
+            </h3>
+            </div>
+        </section>
+
+
+        <section id="section-2" class="container">
+
+          <div class="section-texts">
+            <h2>PASSO 5</h2>
+
+            <h3>
+              Adicione os seguintes códigos entre a tag &lt;body&gt; do seu arquivo HTML
+              :
+            </h3>
+          </div>
+
+          <div>
+            <img src="./image/cdg_body.PNG" style="width: 90%;
+            box-shadow: 10px 20px grey; margin-top: 5%;" alt="Cógidos da tag &lt;body&gt;" />
+          </div>
+        </section>
+
+
+        <div style="align-items: center;"><h3>Faça a mesma coisa agora para os seus arquivos JavaScript :</h3></div>
+        
+        <section  id="section-2" class="container">
+          <div class="section-texts">
+          <h4>main.js</h4>
+          </div>
+  
+          <img src="./image/mainJs.PNG" style="width: 40%;
+          box-shadow: 10px 20px grey; margin-top: 5%;"  alt="Código MainJs"/>
+          
+          <div class="section-texts"><h4 style="margin-left: 30%;">model.js</h4></div>
+          <img src="./image/modelJs.PNG" style="width: 60%;
+          box-shadow: 10px 20px grey; margin-top: 5%;" alt="Código ModelJs" />     
+          
+        </section>
+
+        <section  id="section-2" class="container">
+          <div class="section-texts"> <h4>poke-api.js</h4></div>
+          <img src="./image/pokeApi1.PNG" style="width: 50%;
+          box-shadow: 10px 20px grey; margin-top: 5%;" alt="Poke API 1" />
+          <img src="./image/pokeApi2.PNG" style="width: 40%;
+          box-shadow: 10px 20px grey; margin-top: 5%;" alt="Poke API 2" />
+        </section>
+
+        <div style="align-items: center;">
+          <div class="section-texts">
+            <p>
+              <i
+                >Observe na <strong>linha 27 da nossa poke-api.js</strong> a Url que
+                modificamos lá no início.</i
+              >
+            </p>
+            <h3>Preenchida todas as linhas de códigos, vamos aos resultados!</h3>
+          </div>
+        </div>
+
+
+        <section id="section-1" class="container">
+
+          <img src="./image/pastaPkdx.PNG" style="width: 60%;
+          box-shadow: -10px 20px grey; margin-top: 5%;" alt="Pasta com códigos" />
+
+          <div class="section-texts" style="margin-left: 10%;">
+          <h2>PASSO 6</h2>
+          <h3>Acesse a pasta com todos os arquivos de seus códigos.</h3>
+          </div>
+
+        </section>
+
+        <section id="section-1" class="container">
+
+          <img src="./image/pokedex_nav.PNG" style="width: 60%;
+          box-shadow: -10px 20px grey; margin-top: 5%;" alt="PokeDex no navegador" />
+
+          <div class="section-texts" style="margin-left: 10%;">
+            <p>Após isso, abra o seu arquivo HTML em seu navegador e <i>voilà</i>!</p>
+          </div>
+          
+        </section>
+
+        <div style="align-items: center;">
+          <div class="section-texts">
+            <h2 style="text-align: center">POKEDEX FINALIZADA!</h2>
+          <p>
+            Como a questão de estilo é subjetiva de cada pessoa, não aplicamos os
+            códigos CSS's nesse tutorial.<br />
+            Vale lembrar que o exemplo aqui apresentado exige que você já seja
+            iniciante no mundo da programação,<br />
+            justamente para elucidar como funciona o consumo de API's através de
+            nossos projetos.
+          </p></div>
+          </div>
+
+        <div id="btnTop">
+          <i class="arrow up"></i>
+        </div>
+        
+        
+    </main>
+
+    <div class="rodape">
+      <h2>Pokedex</h2>
+    </div>
+
+    <!--NOSSO JS-->
+    <script src="./assets/js/btnTop.js"></script>
+    
+</body>
+</html>
